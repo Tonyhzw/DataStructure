@@ -42,13 +42,13 @@ public class test2 {
 		if(node.rightnode!=null) printTreeFirst(node.rightnode);
 	}
 	public static void printTreeMidd(Node node){//in-order
-		if(node.leftnode!=null) printTreeFirst(node.leftnode);
+		if(node.leftnode!=null) printTreeMidd(node.leftnode);
 		if(node!=null) System.out.print(node.val);
-		if(node.rightnode!=null) printTreeFirst(node.rightnode);
+		if(node.rightnode!=null) printTreeMidd(node.rightnode);
 	}
 	public static void printTreeLast(Node node){//post-order
-		if(node.leftnode!=null) printTreeFirst(node.leftnode);
-		if(node.rightnode!=null) printTreeFirst(node.rightnode);
+		if(node.leftnode!=null) printTreeLast(node.leftnode);
+		if(node.rightnode!=null) printTreeLast(node.rightnode);
 		if(node!=null) System.out.print(node.val);
 	}
 }
